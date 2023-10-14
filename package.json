@@ -1,0 +1,29 @@
+{
+    "name": "koa",
+    "version": "1.0.0",
+    "description": "Crud koa",
+    "main": "index.js",
+    "scripts": {
+        "build": "babel index.js -d dist",
+        "start": "node ./dist/index.js",
+        "nodemon": "nodemon --exec babel-node index.js"
+    },
+    "keywords": [
+        "koa",
+        "mich"
+    ],
+    "author": "Mich Salcedo",
+    "license": "MIT",
+    "dependencies": {
+        "@koa/router": "^11.0.2",
+        "koa": "^2.14.2",
+        "nodemon": "^3.0.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.23.0",
+        "@babel/core": "^7.23.2",
+        "@babel/node": "^7.22.19",
+        "@babel/preset-env": "^7.23.2",
+        "prettier": "3.0.3"
+    }
+}
