@@ -5,6 +5,9 @@ export default class Server {
         this.app = new Koa();
     }
     init() {
+        this.startRoutes();
+    }
+    startRoutes() {
         for (const router of this.routes) {
             this.app.use(router.routes());
         }
