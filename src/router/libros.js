@@ -12,12 +12,21 @@ export default class RouterLibros {
         return this.router;
     }
     buildRoutes() {
-        this.router.get('/', ctx => {
+        this.router.get('/', async ctx => {
             // Validar autentificacion
             // Services
             const response = new Libros().init();
+            await this.haciendoOperaciones();
             ctx.type = 'html';
             ctx.body = response;
+        });
+    }
+    async haciendoOperaciones() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                console.log('Haciendo operaciones');
+                resolve();
+            }, 2000);
         });
     }
 }

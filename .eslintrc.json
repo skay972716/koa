@@ -1,6 +1,7 @@
 {
+    "ignorePatterns": ["webpack.config.js"],
     "env": {
-        "browser": true,
+        "node": true,
         "es2021": true
     },
     "extends": "eslint:recommended",
@@ -9,21 +10,11 @@
         "sourceType": "module"
     },
     "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
+        "no-undef": "error",
+        "indent": ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "no-debugger": "off"
     }
 }
